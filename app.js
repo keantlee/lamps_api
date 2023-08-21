@@ -22,7 +22,7 @@ require('./view_engine/index');
 require('./config/express_form_request_config')
 
 // Get CORS config
-// require('./config/cors');
+require('./config/cors');
 
 // routes
 require('./routes')(app); 

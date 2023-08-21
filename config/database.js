@@ -14,13 +14,14 @@ global.lampsDev41Connection = new DataSource({
         require('../models/otpEntity'),
         require('../models/rolesEntity'),
         require('../models/userAccessEntity')
-    ],
+    ]
 })
 
 lampsDev41Connection.initialize()
     .then((res) => {
-        console.log("Database connection to Lamps development database is successfully established")
+        console.log("Database connection to Lamps development database is successfully established");
     })
     .catch((err) => {
-        console.error("Database connection to Lamps development database has not established!", err)
+        console.error({status:"Database connection to Lamps development database has not established!", error_message: err});
+        return res.send(`Status: Database connection to Lamps development database has not established! Error: ${err}`);
     })

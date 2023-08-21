@@ -1,4 +1,5 @@
 var {EntitySchema} = require("typeorm");
+require("./rolesEntity"); // Import related entity 
 
 module.exports =  new EntitySchema({
     name: "UserAccess", // Will use table name `UsersOtp` as default behaviour.
@@ -15,9 +16,6 @@ module.exports =  new EntitySchema({
         },
         role_id: {
             type: "int",
-        },
-        date_created: {
-            type: "timestamp"
         },
         status: {
             type: "tinyint",

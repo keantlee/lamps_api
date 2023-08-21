@@ -9,4 +9,5 @@ global.date_and_time = require('date-and-time');
 global.now           = new Date();
 global.jwt           = require('jsonwebtoken');
 global.path          = require("path");
-global.cors          = require('cors')
+global.cors          = require('cors');
+global.ejs           = require('ejs');

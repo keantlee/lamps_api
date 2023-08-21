@@ -1,4 +1,5 @@
 var {EntitySchema} = require("typeorm");
+require("./userAccessEntity"); // Import related entity
 
 module.exports =  new EntitySchema({
     name: "Users", // Will use table name `Users` as default behaviour. // Call "Users" name entity to used this table
